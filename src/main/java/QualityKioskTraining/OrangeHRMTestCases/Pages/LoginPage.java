@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 
 import QualityKioskTraining.AutomationFrameWorkAPI.WebTest;
 import QualityKioskTraining.AutomationFrameWorkAPI.Utilities.Utils;
-
+//changes are made
 public class LoginPage {
 
 	WebTest webTest;
