@@ -1,0 +1,3 @@
+userNameField,ByID,txtUsername
+passwordField,ByCSSSelector,input[type='password']
+loginButton,ByXpath,//input[@value='LOGIN']

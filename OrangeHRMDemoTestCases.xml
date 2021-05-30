@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="OrangeHRMDemoTestCases">
+	<parameter name="browser" value="CHROME">
+	<test name="ValidLoginTests">
+		<classes>
+			<class name="QualityKioskTraining.OrangeHRMTestCases.TestCases.ValidLoginTestCases"/>
+		</classes>
+	</test>
+	<test name="InValidLoginTests">
+		<classes>
+			<class name="QualityKioskTraining.OrangeHRMTestCases.TestCases.InvalidLoginTestCases"/>
+		</classes>
+	</test>
+	</parameter>
+</suite>
