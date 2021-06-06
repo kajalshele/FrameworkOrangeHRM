@@ -6,6 +6,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import QualityKioskTraining.AutomationFrameWorkAPI.Utilities.Utils;
 import QualityKioskTraining.OrangeHRMTestCases.Pages.LoginPage;
 
 public class InvalidLoginTestCases {
@@ -16,7 +17,7 @@ public class InvalidLoginTestCases {
 		loginPage=new LoginPage(browser);
 	}
 	
-	@Test(priority=1 ,dataProvider="invalidLoginData")
+	@Test(priority=1 ,dataProvider="inValidCredentialFromExcel")
 	public void testLoginWithInValidCredential(String username,String password,String errorMsg) {
 		/*
 		 * open browser
@@ -30,6 +31,11 @@ public class InvalidLoginTestCases {
 		String currentError=loginPage.getLoginError();
 		
 		Assert.assertEquals(errorMsg, currentError);
+	}
+	@DataProvider
+	public Object[][] inValidCredentialFromExcel() {
+		String[][] credentials = Utils.readDataFromExcel("LoginTestData");
+		return credentials;
 	}
 	
 	@DataProvider
